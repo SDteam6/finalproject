@@ -53,7 +53,17 @@ nav li{
 	margin-top: 22px;
     font-size: 16px;
 }
-
+.button {
+	border: none;
+	background-color: white;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
 p{
 	font-size: 16px;
     line-height: 26px;
