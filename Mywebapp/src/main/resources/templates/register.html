@@ -74,7 +74,101 @@
           </div>
         </nav>
     </div>
+
+      <div class="container">
+          <div class="row" >
+              <div class="col align-self-start">
+                  <br>
+              </div>
+              <div style="margin-top: 70px" class="col align-self-center bg-light border border-3 rounded rounded-3">
+                  <h4 style="text-align: center;margin: 15px;padding-bottom:10px;font-size: 35px; color: gray">會員註冊</h4>
+                  <div  class="input-group mb-3">
+                      <span style="font-size: 23px;padding: 5px" class="input-group-text" id="username">姓名</span>
+                      <input style="color: dimgray;font-size: 23px;padding: 5px"type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+
+                  <div  class="input-group mb-3">
+                      <span style="font-size: 23px;padding: 5px" class="input-group-text" id="userid">帳號</span>
+                      <input style="color: dimgray;font-size: 23px;padding: 5px"type="text" class="form-control" placeholder="User ID" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                      <span style="font-size: 23px;padding: 5px"class="input-group-text" id="password" >密碼</span>
+                      <input style="font-size: 23px;padding: 5px" input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                  </div>
+                  <div class="input-group mb-3">
+                      <span style="font-size: 23px;padding: 5px"class="input-group-text" id="re_password" >確認密碼</span>
+                      <input style="font-size: 23px;padding: 5px" input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                  </div>
+                  <div  class="input-group mb-3">
+                      <span style="font-size: 23px;padding: 5px" class="input-group-text" id="gender">性別</span>
+                      <div style="color: dimgray;font-size: 23px;margin-left: 30px; class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label style="padding: 5px" class="form-check-label" for="inlineRadio1">MALE</label>
+                      </div>
+                      <div style="color: dimgray;font-size: 23px;margin-left: 30px;class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label style="padding: 5px"class="form-check-label" for="inlineRadio2">FEMALE</label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div  style="margin-left: 15px;" class="input-group mb-3">
+                          <span style="font-size: 23px;padding: 5px" class="input-group-text" id="address">地址</span>
+
+                          <div class="col-md">
+                              <div  class="form-floating">
+                                  <select style="color: dimgray; font-size: 20px; width:45%; padding: 7px;border: #cccccc" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                      <option selected>選擇縣市</option>
+                                      <option value="1">台北市</option>
+                                      <option value="2">新北市</option>
+                                      <option value="3">基隆市</option>
+                                      <option value="4">桃園市</option>
+                                      <option value="5">新竹市</option>
+                                      <option value="6">新竹縣</option>
+                                      <option value="7">苗栗縣</option>
+                                      <option value="8">台中市</option>
+                                      <option value="9">彰化縣</option>
+                                      <option value="10">南投縣</option>
+                                      <option value="11">雲林縣</option>
+                                      <option value="12">嘉義縣</option>
+                                      <option value="13">嘉義市</option>
+                                      <option value="14">台南市</option>
+                                      <option value="15">高雄市</option>
+                                      <option value="16">屏東縣</option>
+                                      <option value="17">台東縣</option>
+                                      <option value="18">花蓮縣</option>
+                                      <option value="19">宜蘭縣</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md">
+                      <div class="form-floating">
+                          <textarea class="form-control" placeholder="address" id="floatingTextarea2" style="height: 35px"></textarea>
+                      </div>
+                      </div>
+                </div><br>
+                <div class="input-group mb-3">
+                  <span style="font-size: 23px;padding: 5px" class="input-group-text" id="birth">生日</span>
+                  <div class = "content"> <input style="border: #cccccc;line-height: 28px;color:gray"  type="Date" required></div>
+                </div>
+
+                  <div style="text-align: center">
+                      <button  style="font-size: 25px;color: white;text-align: center;" type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+                          save
+                      </button>
+                  </div>
+                  <div style="text-align: center; margin: 15px;">
+                      <a href="register.html" target="註冊"></a>
+                  </div>
+              </div>
+              <div class="col align-self-end">
+                  <br>
+              </div>
+          </div>
+      </div>
 </header>
+
 <form action="c_password_in.php" method="post">
   <fieldset>
       <div>
@@ -86,7 +180,6 @@
      <div class = "content">帳號<input style="line-height: 28px;"  type="email" name = 'c_mail' placeholder="Your email" required></div>
      <div class = "content">密碼<input style="line-height: 28px;"  type="text" name = 'c_pw' placeholder="Your phonenumber" required></div>
      <div class = "content">確認密碼 <input  style="line-height: 28px;" type="password" required></div>
-     <div class = "content">生日 <input style="line-height: 28px;"  type="Date" required></div>
      <div class = "content">country <select name="favorite" id="country" required>
                                     <option value="台北市" selected>台北市</option>
                                     <option value="新北市">新北市</option>
