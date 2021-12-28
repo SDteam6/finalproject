@@ -18,6 +18,15 @@ nav li{
 	float:left;
 	border-top:1px #ccc solid;
 }
+
+#DIV2{
+	width:50%;
+	height:100%;
+	background-color:white;
+	margin: auto;
+	text-align: left;
+	border:1px #ccc solid;
+}
 .dt {
 	font-size: 20px;
 }
@@ -60,6 +69,16 @@ table {
     padding: 7px 28px;
     border-radius: 20px;
     border: none;
+}
+.btn1{
+	background-color: #D2B48C;
+	padding: 7px 28px;
+	border-radius: 20px;
+	border: none;
+}
+.btn1:hover{
+	opacity:0.8;
+	background-color: #D2B48C!important;
 }
 .btn:hover{
 	opacity:0.8;

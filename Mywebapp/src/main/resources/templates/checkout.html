@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <title>checkout</title>
+    <style>
+        .text1{
+            width:100%;
+            height:50px;
+            text-align: right;
+            float: right;
+            margin-right: 120px;
+        }
+
+        .item_header{
+            display: flex;
+            width: 1100px;
+            height: 40px;
+            background: #fff;
+            margin: 20px auto;
+
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+        .item_header div{
+            width: 25%;
+            color: #888;
+            line-height: 70px;
+        }
+        .item_inn{
+            display: flex;
+            width: 1150px;
+            height: 50px;
+            background: #fff;
+            margin: 30px auto; <!--行距-->
+            border-radius: 10px;
+        }
+
+        .item_inn div{
+            width: 250px;
+            height: 0px;
+            color: #888;
+            line-height: 50px;
+        }
+        .item_header .item_detail{
+            width: 80%;
+        }
+        .item_inn .item_detail{
+            width: 50%;
+
+        }
+        .grid-item {
+
+            float:none;
+            padding-left: 38%;
+        }
+        <!--分隔線-->
+            hr.style-up {
+                border: 1px;
+                height: 0.1px;
+
+                background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            }
+    </style>
+    <link rel="stylesheet" href="c_index.css" type="text/css">
+
+</head>
+<body>
+<header>
+    <div class='container'>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="home.html"><img src='pictures/logo.jpg' width='105'></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">主頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">常見問題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">登入</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<img style="margin-left: 33%;width:500px;" src="pictures/cartpic_2.png" ><br>
+
+    <div id="DIV2" class='col'>
+        <br>
+        <h4 style="color: dimgray;font-size: 17px;padding: 5px">付款方式</h4>
+        <hr class="style-up" />
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label style="color: dimgray;font-size: 17px;padding: 5px"class="form-check-label" for="flexRadioDefault1">
+                711取貨付款
+            </label>
+        </div>
+        <hr class="style-up" />
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label style="color: dimgray;font-size: 17px;padding: 5px"class="form-check-label" for="flexRadioDefault1">
+                全家取貨付款
+            </label>
+        </div>
+        <hr class="style-up" />
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label style="color: dimgray;font-size: 17px;padding: 5px"class="form-check-label" for="flexRadioDefault1">
+                萊爾富取貨付款
+            </label>
+        </div>
+        <hr class="style-up" />
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label style="color: dimgray;font-size: 17px;padding: 5px" class="form-check-label" for="flexRadioDefault2">
+                信用卡付款
+            </label>
+        </div>
+        <hr class="style-up" />
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label style="color: dimgray;font-size: 17px;padding: 5px" class="form-check-label" for="flexRadioDefault2">
+                LINE Pay(可用line points折抵)
+            </label>
+        </div>
+        <hr class="style-up" />
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label style="color: dimgray;font-size: 17px;padding: 5px" class="form-check-label" for="flexRadioDefault2">
+               宅配貨到付款
+            </label>
+        </div>
+        <hr class="style-up" />
+    </div>
+    <br>
+    <div id="DIV2" class='col'>
+        <br>
+        <h4 style="color: dimgray;font-size: 17px;padding: 5px">收件人資訊</h4>
+        <hr class="style-up" />
+
+        <label style="color: dimgray;font-size: 17px;padding: 5px" class="form-check-label" for="flexRadioDefault2">
+            姓名
+        </label>
+        <input style="margin-left:55pt;color: dimgray;font-size: 17px;padding: 5px;border:0pt" type="text"placeholder="輸入姓名"; >
+
+        <hr class="style-up" />
+
+        <label style="color: dimgray;font-size: 17px;padding: 5px" class="form-check-label" for="flexRadioDefault2">
+            手機號碼
+        </label>
+        <input style="margin-left:28pt;color: dimgray;font-size: 17px;padding: 5px;border:0pt" type="text"placeholder="輸入有效手機號碼"; >
+
+        <hr class="style-up" />
+
+        <label style="color: dimgray;font-size: 17px;padding: 5px" class="form-check-label" for="flexRadioDefault2">
+            地址
+        </label>
+        <input style="margin-left:55pt;color: dimgray;font-size: 17px;padding: 5px;border:0pt" type="text"placeholder="輸入地址"; >
+
+        <hr class="style-up" />
+    </div>
+
+
+    <div class="col">
+        <div class="grid-item">
+            <br>
+            <button style="margin-left: 10px;"type="button" class="btn1 btn-light">
+                <a href="shopcart.html"><span style="color:#FFF2F2;">確認購物車</span></a>
+            </button>
+            &emsp;&emsp;&emsp;&emsp;
+            <button type="button" class="btn1 btn-light">
+                <a href="home.html"><span style="color:#FFF2F2;">送出訂單</span></a>
+            </button>
+            <br>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
