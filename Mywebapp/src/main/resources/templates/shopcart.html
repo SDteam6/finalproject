@@ -11,11 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
-    <title>order</title>
+    <title>shopcart</title>
     <style>
         .text1{
             width:100%;
-            height:50px;
+            height:40px;
             text-align: right;
             float: right;
             margin-right: 120px;
@@ -23,8 +23,8 @@
 
         .item_header{
             display: flex;
-            width: 1100px;
-            height: 20px;
+            width: 1050px;
+            height: 50px;
             background: #fff;
             margin: 20px auto;
             border-radius: 10px;
@@ -33,15 +33,16 @@
         .item_header div{
             width: 25%;
             color: #888;
-            line-height: 20px;
+            line-height: 90px;
         }
         .item_inn{
             display: flex;
-            width: 1150px;
-            height: 50px;
+            width: 1050px;
+            height: 40px;
             background: #fff;
-            margin: 30px auto; <!--行距-->
+            margin: 10px auto; <!--行距-->
             border-radius: 10px;
+            padding-right: 50px;
         }
         .item_inn div{
             width: 250px;
@@ -50,10 +51,10 @@
             line-height: 50px;
         }
         .item_header .item_detail{
-            width: 80%;
+            width: 70%;
         }
         .item_inn .item_detail{
-            width: 50%;
+            width: 70%;
 
         }
         .grid-item {
@@ -102,70 +103,79 @@
     </div>
 </header>
 
-    <div id="order">
-        <div class="container">
-            <div class="item_header">
-                &emsp;&emsp;<!--全型空格為了排版-->
-                <div class="item">商品</div>
-                <div class="item_detail">商品名稱</div>
-                <div class="item">單價</div>
-                <div class="count">數量</div>
-                <div class="item">小計</div>
-            </div>
-            <hr class="style-up" />
-            <!--分隔線-->
+<div id="order">
+    <div><img style="margin-left: 33%; width:450px;" src="pictures/cartpic1.jpg"></div>
+    <div class="container">
+        <div class="item_header">
+            &emsp;
+            <div class="item">商品</div>
+            <div class="item_detail">商品名稱</div>
+            <div class="item">單價</div>
+            <div class="count">數量</div>
+            <div class="item">小計</div>
+            <div class="item">操作</div>
+        </div>
+       <div margin = 10px auto;>
+        <hr class="style-up" width = "1050px;"/>
+        <!--分隔線-->
 
-            <div class="item_inn">
-                <a href="signal.html"><div><img src='pictures/cookie_origin.png' width='120'></div></a>
-                <div class="item_detail">萬聖節小餅乾</div>
-                <div class="item">500</div>
-                <div ><!--按鈕-->
-                    <select class="form-select" aria-label="Default select example">
+        <div class="item_inn" >
+            &emsp;
+            <div><img src='pictures/cookie_origin.png' width='70'></div>
+            <div class="item_detail"><a href="signal.html">萬聖節小餅乾</a></div>
+            &emsp;&emsp;
+            <div class="item">500</div>
+            <div ><!--按鈕-->
+                <select class="form-select" aria-label="Default select example">
 
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="">5</option>
-                    </select>
-                </div>
-                <div class="item">500</div>
-            </div>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value=""> 5 </option>
+                </select>
+            </div >
+            <div class="item">500</div>
+            <button type="button" class="btn1 btn-secondary">delet</button>
+            <br>
+        </div>
 
-            <div>
-                <hr class="style-up" /><!--圖片後的分隔線-->
-            </div>
-            <div class="text1"/>
-                <span style="color:#6E6E6E;">運費</span>
-                &emsp;&emsp;&emsp;
-                <span style="color:#6E6E6E;">NT$</span>
-                &emsp;
-                <span style="color:#6E6E6E;">200</span>
-            </div>
-            <div class="text1"/>
-                <span style="color:#6E6E6E;">總計</span>
-                &emsp;&emsp;&emsp;
-                <span style="color:#6E6E6E;">NT$</span>
-                &emsp;
-                <span style="color:#6E6E6E;">700</span>
-            </div>
+        <div >
+            <hr class="style-up" width = "1050px;"/><!--圖片後的分隔線-->
+        </div>
+        <div class="text1"/>
+        <span style="color:#6E6E6E;">運費</span>
+        &emsp;&emsp;&emsp;
+        <span style="color:#6E6E6E;">NT$</span>
+        &emsp;
+        <span style="color:#6E6E6E;">200</span>
+    </div>
+    <div class="text1"/>
+    <span style="color:#6E6E6E;">總計</span>
+    &emsp;&emsp;&emsp;
+    <span style="color:#6E6E6E;">NT$</span>
+    &emsp;
+    <span style="color:#6E6E6E;">700</span>
+</div>
+<!--
 
-            <div class="grid-item">
-                <div class="block">
-                    <div style="" class="row">
-                        <button type="button" class="btn btn-light">
-                            <a href="home.html"><span style="color:#FFF2F2;">繼續購物</span></a>
-                        </button>
-                        &emsp;&emsp;
-                        <button type="button" class="btn btn-light">
-                            <a href="home.html"><span style="color:#FFF2F2;">前往結帳</span></a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
+-->
+<div class="grid-item">
+    <div class="block">
+        <div style="" class="row">
+            <button type="button" class="btn1 btn-light">
+                <a href="home.html"><span style="color:#FFF2F2;">繼續購物</span></a>
+            </button>
+            &emsp;&emsp;
+            <button type="button" class="btn btn-light">
+                <a href="checkout.html"><span style="color:#FFF2F2;">下一步</span></a>
+            </button>
         </div>
     </div>
+</div>
+
+</div>
+</div>
 </body>
 
 </html>
