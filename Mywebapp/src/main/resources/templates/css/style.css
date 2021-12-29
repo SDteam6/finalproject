@@ -80,6 +80,17 @@ table {
 	opacity:0.8;
 	background-color: #D2B48C!important;
 }
+.btn2{
+	background-color: #666666;
+	padding: 7px 28px;
+	border-radius: 20px;
+	border: none;
+}
+.btn2:hover{
+	opacity:0.8;
+	background-color: #D2B48C!important;
+}
+
 .btn:hover{
 	opacity:0.8;
 	background-color: #f05f5c!important;
