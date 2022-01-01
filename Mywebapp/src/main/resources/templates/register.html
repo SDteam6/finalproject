@@ -82,6 +82,8 @@
                   <br>
               </div>
               <div style="margin-top: 70px" class="col align-self-center bg-light border border-3 rounded rounded-3">
+                  <form>
+                  <fieldset>
                   <h4 style="text-align: center;margin: 15px;padding-bottom:10px;font-size: 35px; color: gray">會員註冊</h4>
                   <div  class="input-group mb-3">
                       <span style="font-size: 23px;padding: 5px" class="input-group-text" id="username">姓名</span>
@@ -156,17 +158,25 @@
 
                   <div style="text-align: center">
                       <button style="margin-left: 10px;"type="button" class="btn2 btn-light">
-                          <a href="login.html"><span style="color:#FFF2F2;">register</span></a>
+                          <a onclick="checkRegister()" href="login.html"><span style="color:#FFF2F2;">register</span></a>
                       </button>
                   </div>
-
+                  </fieldset>
+                  </form>
               </div>
               <div class="col align-self-end">
                   <br>
               </div>
           </div>
       </div>
-
-
 </body>
+<script type="text/javascript">
+    $(function(){
+        checkRegister = function(){
+
+            $("#loginForm").submit();
+
+        }
+    });
+</script>
 </html>
