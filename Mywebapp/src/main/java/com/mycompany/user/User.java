@@ -2,6 +2,11 @@ package com.mycompany.user;
 
 import javax.persistence.*;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.io.Serializable;
+import java.util.Date;
+
 @SuppressWarnings("ALL")
 @Entity
 @Table(name = "users_table")
@@ -16,7 +21,8 @@ public class User {
     private String password;
     private String gender;
     private String address;
-
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birthday;      //生日
     public Integer getId() {return id;}
     public void setId(Integer id) {this.id = id;}
 
@@ -44,6 +50,13 @@ public class User {
     public String getaddress() {return address;}
     public void setaddress(String address) {this.address = address;}
 
+    public Date getBirthday() {
+        return birthday;
+     }
+     public void setBirthday(Date birthday) {
+      this.birthday = birthday;
+ }
+
     @Override
     public String toString() {
         return "User{" +
@@ -53,6 +66,7 @@ public class User {
                 ", password='" + getpassword() + '\'' +
                 ", gender='" + getgender() + '\'' +
                 ", address='" + getaddress() + '\'' +
+                ", birthday=" + birthday +
                 '}';
     }
 
