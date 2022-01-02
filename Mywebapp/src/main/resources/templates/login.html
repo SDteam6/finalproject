@@ -19,23 +19,23 @@
     <header>
         <div class='container'>
             <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand" href="home.html"><img src='pictures/logo.jpg' width='105'></a>
+              <a class="navbar-brand" th:href="@{/home}"><img src='pictures/logo.jpg' width='105'></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="home.html">主頁</a>
+                    <a class="nav-link" th:href="@{/home}">主頁</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">聯絡我們</a>
+                    <a class="nav-link disabled">聯絡我們</a>
                   </li>	
                   <li class="nav-item">
-                    <a class="nav-link" href="faq.html">常見問題</a>
+                    <a class="nav-link disabled">常見問題</a>
                   </li>			
                   <li class="nav-item">
-                    <a class="nav-link" href="login.html">登入</a>
+                    <a class="nav-link" th:href="@{/login}">登入</a>
                   </li>
                 </ul>
               
@@ -60,12 +60,12 @@
                 </div>
                 <div style="text-align: center">
                     <button style="margin-left: 10px;"type="button" class="btn2 btn-light">
-                        <a href="home.html"><span style="color:#FFF2F2;">login</span></a>
+                        <a th:href="@{/home}"><span style="color:#FFF2F2;">login</span></a>
                     </button>
 
                 </div>
                 <div style="font-size: 18px;text-align: center; color:#666666;margin: 15px;">沒有帳號嗎?
-                    <a href="register.html" >註冊</a>
+                    <a th:href="@{/register}" >註冊</a>
                 </div>
             </div>
             <div class="col align-self-end">
