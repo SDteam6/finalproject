@@ -24,7 +24,7 @@
 <header>
     <div class='container'>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="home.html"><img src='pictures/logo.jpg' width='105'></a>
+            <a class="navbar-brand" th:href="@{/home}"><img src='pictures/logo.jpg' width='105'></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,10 +45,10 @@
                 </ul>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html"><img src='pictures/user.png'  width="40" height="40" ></a>
+                        <a class="nav-link" th:href="@{/home}"><img src='pictures/user.png'  width="40" height="40" ></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shopcart.html"><img src='pictures/shopcart.jpg'  width="40" height="40" ></a>
+                        <a class="nav-link" th:href="@{/shopcart}"><img src='pictures/shopcart.jpg'  width="40" height="40" ></a>
                     </li>
                 </ul>
 
@@ -185,10 +185,10 @@
 <div class="grid-item">
     <div style=" color: white; text-align: center" class="row">
         <button type="button" class="btn1 btn-light">
-            <a href="home.html"><span style="color:#FFF2F2;">回到首頁</span></a>
+            <a th:href="@{/home}"><span style="color:#FFF2F2;">回到首頁</span></a>
         </button>
         <button  style="margin-left: 10px;color: white;text-align: center;" type="button" class="btn1 btn-light" data-toggle="modal" data-target="#exampleModal">
-            <span style="color:#FFF2F2;">送出訂單</span></a>
+            <a><span style="color:#FFF2F2;">送出訂單</span></a>
         </button>
     </div>
 
@@ -209,10 +209,10 @@
                 </div>
                 <a class="nav-link" >
                     <div class="modal-footer">
-                        <a href="shopcart.html">
+                        <a th:href="@{/shopcart}">
                         <button type="button" class="btn btn-secondary"  >檢視訂單</button>
                         </a>
-                        <a href="history.html">
+                        <a th:href="@{/history}">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">確認送出</button>
                         </a>
                     </div>

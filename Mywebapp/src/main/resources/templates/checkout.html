@@ -77,7 +77,7 @@
 <header>
     <div class='container'>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="home.html"><img src='pictures/logo.jpg' width='105'></a>
+            <a class="navbar-brand" th:href="@{/home}"><img src='pictures/logo.jpg' width='105'></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -93,15 +93,15 @@
                         <a class="nav-link disabled" href="faq.html">常見問題</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/login}"">登入</a>
+                        <a class="nav-link" th:href="@{/login}">登入</a>
                     </li>
                 </ul>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html"><img src='pictures/user.png'  width="40" height="40" ></a>
+                        <a class="nav-link" th:href="@{/home}"><img src='pictures/user.png'  width="40" height="40" ></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shopcart.html"><img src='pictures/shopcart.jpg'  width="40" height="40" ></a>
+                        <a class="nav-link" th:href="@{/shopcart}"><img src='pictures/shopcart.jpg'  width="40" height="40" ></a>
                     </li>
                 </ul>
 
@@ -193,11 +193,11 @@
         <div class="grid-item">
             <br>
             <button style="margin-left: 10px;"type="button" class="btn1 btn-light">
-                <a href="shopcart.html"><span style="color:#FFF2F2;">確認購物車</span></a>
+                <a th:href="@{/shopcart}"><span style="color:#FFF2F2;">確認購物車</span></a>
             </button>
             &emsp;&emsp;&emsp;&emsp;
             <button type="button" class="btn btn-light">
-                <a href="finish.html"><span style="color:#FFF2F2;">下一步</span></a>
+                <a th:href="@{/finish}"><span style="color:#FFF2F2;">下一步</span></a>
             </button>
             <br><br>
 

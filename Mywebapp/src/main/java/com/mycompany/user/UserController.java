@@ -33,9 +33,13 @@ public class UserController {
     public String gotofinish(Model model) {
         return "finish";
     }
-    @GetMapping("/profile")
-    public String gotoprofile(Model model) {
-        return "profile";
+    @GetMapping("/history")
+    public String gotohistory(Model model) {
+        return "history";
+    }
+    @GetMapping("/profiledata")
+    public String gotoprofiledata(Model model) {
+        return "profiledata";
     }
     @GetMapping("/shopcart")
     public String gotoshopcart(Model model) {
@@ -44,6 +48,10 @@ public class UserController {
     @GetMapping("/signal")
     public String gotosignal(Model model) {
         return "signal";
+    }
+    @GetMapping("/signal2")
+    public String gotosignal2(Model model) {
+        return "signal2";
     }
 
     @GetMapping("/register")
