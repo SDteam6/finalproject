@@ -19,15 +19,36 @@ public class UserController {
 
     @GetMapping("/home")
     public String showUserList(Model model) {
-        List<User> listUsers = service.listAll();
-        model.addAttribute("listUsers", listUsers);
         return "home";
     }
+    @GetMapping("/login")
+    public String gotologin(Model model) {
+        return "login";
+    }
+    @GetMapping("/checkout")
+    public String gotocheckout(Model model) {
+        return "checkout";
+    }
+    @GetMapping("/finish")
+    public String gotofinish(Model model) {
+        return "finish";
+    }
+    @GetMapping("/profile")
+    public String gotoprofile(Model model) {
+        return "profile";
+    }
+    @GetMapping("/shopcart")
+    public String gotoshopcart(Model model) {
+        return "shopcart";
+    }
+    @GetMapping("/signal")
+    public String gotosignal(Model model) {
+        return "signal";
+    }
 
-    @GetMapping("/users/new")
+    @GetMapping("/register")
     public String showNewFrom(Model model) {
         model.addAttribute("user", new User());
-        model.addAttribute("pageTitle", "Add New User");
         return "user_from";
     }
 
@@ -35,7 +56,7 @@ public class UserController {
     public String saveUser(User user, RedirectAttributes ra) {
         service.save(user);
         ra.addFlashAttribute("message", "The user has been saved successfully.");
-        return "redirect:/users";
+        return "redirect:/home";
     }
 
     /**
@@ -47,7 +68,7 @@ public class UserController {
         try {
             User user = service.get(id);
             model.addAttribute("user", user);
-            model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
+            model.addAttribute("pageTitle", "Edit Book (ID: " + id + ")");
 
             return "user_from";
         } catch (UserNotFoundException e) {
@@ -67,4 +88,6 @@ public class UserController {
         return "redirect:/users";
 
     }
+
+
 }
