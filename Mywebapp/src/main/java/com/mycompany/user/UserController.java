@@ -53,7 +53,10 @@ public class UserController {
     public String gotosignal2(Model model) {
         return "signal2";
     }
-
+    @GetMapping("/profile")
+    public String gotoprofile(Model model) {
+        return "profile";
+    }
     @GetMapping("/register")
     public String showNewFrom(Model model) {
         model.addAttribute("user", new User());

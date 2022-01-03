@@ -45,7 +45,7 @@
                 </ul>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/home}"><img src='pictures/user.png'  width="40" height="40" ></a>
+                        <a class="nav-link" th:href="@{/profile}"><img src='pictures/user.png'  width="40" height="40" ></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/shopcart}"><img src='pictures/shopcart.jpg'  width="40" height="40" ></a>
@@ -202,9 +202,9 @@
                     </button>
                 </div>
                 <div class="modal-body"style="text-align: center" >
-                    <b font face="微軟正黑體">訂單送出後，將無法修改</b font>
+                    <b font face="微軟正黑體">訂單送出後，將無法修改</bfont>
                     <br>
-                    <b font face="微軟正黑體">請於3-4個工作日後，攜帶證件完成取件</b font>
+                    <b font face="微軟正黑體">請於3-4個工作日後，攜帶證件完成取件</bfont>
 
                 </div>
                 <a class="nav-link" >
@@ -212,8 +212,9 @@
                         <a th:href="@{/shopcart}">
                         <button type="button" class="btn btn-secondary"  >檢視訂單</button>
                         </a>
-                        <a th:href="@{/history}">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">確認送出</button>
+
+                        <button type="button" class="btn btn-secondary">
+                            <a th:href="@{/history}">data-dismiss="modal">確認送出</button>
                         </a>
                     </div>
                 </a>
