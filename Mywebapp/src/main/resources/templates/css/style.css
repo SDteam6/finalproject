@@ -31,7 +31,7 @@ nav li{
 	font-size: 20px;
 }
 table {
-	font-family: 微軟正黑體;
+	font-family: '微軟正黑體';
 	font-size:20px;
 	width:800pt;
 	text-align:center;
@@ -53,7 +53,7 @@ table {
     text-align: left;
     box-sizing: border-box;
 }
-#FIN3{
+.FIN3{
     width:56%;
     height:200px;
     background-color:#FAFAFA;
