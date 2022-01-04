@@ -78,10 +78,10 @@
                        </button></dd>
 
                       <dt class="col-sm-4">密碼</dt>
-                      <dd class="col-sm-4">*******
-                          <button style="color: white;border: none;" type="button" class="badge badge-pill badge-danger">
+                      <dd class="col-sm-4"><input style="text-align: center;border: 0px; background-color: #FFE8E8" type="password"  id="password" value="1234567" disabled>
+                          <button style="color: white;border: none;" type="button" class="badge badge-pill badge-danger" onclick="showPS()">
                           <i class="far fa-eye-slash"></i>
-                          </button></button></dd>
+                          </button></dd>
                       <dd class="col-sm-4"><button style="color: white;text-align: right" type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
                             edit
                       </button></dd>
@@ -137,6 +137,17 @@
    </div>
 
 
+<script>
+    function showPS() {
+        var x=document.getElementById("password");
+        if(x.type==="password"){
+            x.type="text";
+        }
+        else{
+            x.type="password"
+        }
 
+    }
+</script>
 </body>
 </html>
