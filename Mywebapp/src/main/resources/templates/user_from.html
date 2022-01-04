@@ -76,8 +76,7 @@
         </nav>
     </div>
     <div class="container">
-        <form th:action="@{/users/save}" method="post" th:object="${user}"
-              style="max-width: 500px; margin:0 auto;">
+        <form th:action="@{/users/save}" method="post" th:object="${user}"style="max-width: 500px; margin:0 auto;">
             <input type="hidden" th:field="*{id}">
             <div class="col align-self-start">
                 <br>
@@ -100,7 +99,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <span style="font-size: 23px;padding: 5px"class="input-group-text" id="re_password" >確認密碼</span>
-                    <input style="font-size: 23px;padding: 5px" input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <input style="font-size: 23px;padding: 5px" input type="password" id="inputPassword7" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
 
 
@@ -143,7 +142,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="input-group mb-3">
+                    <div style="margin-left: 15px; margin-top: 15px;" class="input-group mb-3">
                         <span style="font-size: 23px;padding: 5px" class="input-group-text"   id="birthday">生日</span>
                         <div class = "content"> <input style="border: #cccccc;line-height: 28px;color:gray" th:field="*{birthday}" type="date" required></div>
                     </div>
@@ -157,6 +156,7 @@
                 <div class="col align-self-end">
                     <br>
                 </div>
+            </div>
         </form>
     </div>
     <script type="text/javascript">
