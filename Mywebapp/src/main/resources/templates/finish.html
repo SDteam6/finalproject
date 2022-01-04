@@ -152,10 +152,6 @@
         <span style="color: #969696; font-size: 14px; padding: 3px 10px">以電子郵件傳送最新消息與優惠活動給我</span>
     </div>
 </div>
-<<<<<<< HEAD
-=======
-<!--勾選-->
->>>>>>> e51e304f6d96dfb66d24a83228c8f9a10e740844
 
 
 <br>
@@ -205,36 +201,25 @@
                 </button>
             </div>
             <div class="modal-body"style="text-align: center" >
-                <b font face="微軟正黑體">訂單送出後，將無法修改</b>
+                <b style="font-family:'微軟正黑體'">訂單送出後，將無法修改</b>
                 <br>
-                <b font face="微軟正黑體">請於3-4個工作日後，攜帶證件完成取件</b>
+                <b style="font-family:'微軟正黑體'" >請於3-4個工作日後，攜帶證件完成取件</b>
             </div>
-            <div class="modal-footer" >
-                <div style="text-align: center" class="col">
-                <button  type="button" class="btn btn-secondary" data-dismiss="modal">
-                    <a th:href="@{/shopcart}"><span style="color:#FFF2F2;">檢視訂單</span></a>
-                </button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                    <a th:href="@{/shopcart}"><span style="color:#FFF2F2;">確認送出</span></a>
-                </button>
-                </div>
-                <div class="modal-body"style="text-align: center" >
-                    <b font face="微軟正黑體">訂單送出後，將無法修改</bfont>
-                        <br>
-                        <b font face="微軟正黑體">請於3-4個工作日後，攜帶證件完成取件</bfont>
+            <a class="nav-link" >
+                <div class="modal-footer">
 
-                </div>
-                <a class="nav-link" >
-                    <div class="modal-footer">
-                        <a th:href="@{/shopcart}">
-                            <button type="button" class="btn btn-secondary"  >檢視訂單</button>
-                        </a>
-                        <a th:href="@{/history}">
-                            <button type="button" class="btn btn-secondary" >確認送出 </button>
-                        </a>
-
+                    <div style="text-align: center" class="col">
+                    <a th:href="@{/shopcart}">
+                        <button type="button" class="btn btn-secondary"  >檢視訂單</button>
+                    </a>
+                    <a th:href="@{/history}">
+                        <button type="button" class="btn btn-secondary" >確認送出 </button>
+                    </a>
                     </div>
-                </a>
+                </div>
+            </a>
+
+            </div>
             </div>
         </div>
     </div>
