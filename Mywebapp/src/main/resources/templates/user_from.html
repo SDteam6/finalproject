@@ -75,40 +75,42 @@
             </div>
         </nav>
     </div>
+</header>
+<section>
     <div class="container">
-        <form th:action="@{/users/save}" method="post" th:object="${user}"style="max-width: 500px; margin:0 auto;">
-            <input type="hidden" th:field="*{id}">
+        <div class="row">
             <div class="col align-self-start">
                 <br>
             </div>
-            <br>
-            <div class="border border-secondary rounded p-3">
-                <h4 style="text-align: center;margin: 15px;padding-bottom:10px;font-size: 35px; color: gray">會員註冊</h4>
-                <div  class="input-group mb-3">
-                    <span style="font-size: 23px;padding: 5px" class="input-group-text" id="username">姓名</span>
-                    <input style="color: dimgray;font-size: 23px;padding: 5px"type="text" th:field="*{firstName}" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 
-                </div>
+            <div style="margin-top: 10px" class="col align-self-center bg-light border border-3 rounded rounded-3">
+                <form th:action="@{/users/save}" method="post" th:object="${user}"><input type="hidden" th:field="*{id}">
+                <h4 style="text-align: center;margin: 15px;padding-bottom:10px;font-size: 25px; color: gray">會員註冊</h4>
                 <div  class="input-group mb-3">
-                    <span style="font-size: 23px;padding: 5px" class="input-group-text" id="userid">帳號</span>
-                    <input style="color: dimgray;font-size: 23px;padding: 5px"type="text"  input th:field="*{userid}"class="form-control" placeholder="User ID" aria-label="Username" aria-describedby="basic-addon1">
+                    <span style="font-size: 15px;padding: 5px" class="input-group-text" id="username">姓名</span>
+                    <input style="color: dimgray;font-size: 15px;padding: 5px"type="text" th:field="*{firstName}" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div  class="input-group mb-3">
+                    <span style="font-size: 15px;padding: 5px" class="input-group-text" id="userid">帳號</span>
+                    <input style="font-size: 15px;padding: 5px"type="text"  input th:field="*{userid}"class="form-control" placeholder="User ID" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
-                    <span style="font-size: 23px;padding: 5px"class="input-group-text" id="password" >密碼</span>
-                    <input style="font-size: 23px;padding: 5px" input type="password" th:field="*{password}" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <span style="font-size: 15px;padding: 5px"class="input-group-text" id="password" >密碼</span>
+                    <input style="padding: 5px"  type="password" th:field="*{password}" id="inputPassword" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
                 <div class="input-group mb-3">
-                    <span style="font-size: 23px;padding: 5px"class="input-group-text" id="re_password" >確認密碼</span>
-                    <input style="font-size: 23px;padding: 5px" input type="password" id="inputPassword7" class="form-control" aria-describedby="passwordHelpInline">
+                    <span style="font-size: 15px;padding: 5px"class="input-group-text" id="re_password" >確認密碼</span>
+                    <input style="font-size: 15px;padding: 5px" input type="password" id="inputPassword7" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
 
                 <div class="row">
                     <div  style="margin-left: 15px;" class="input-group mb-3">
-                        <span style="font-size: 23px;padding: 5px" class="input-group-text" id="address">地址</span>
+                        <span style="font-size: 15px;padding: 5px" class="input-group-text" id="address">地址</span>
 
                         <div class="col-md">
                             <div  class="form-floating">
-                                <select style="color: dimgray; font-size: 20px; width:45%; padding: 7px;border: #cccccc" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <select style="color: dimgray; font-size: 15px; width:45%; padding: 7px;border: #cccccc" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
                                     <option selected>選擇縣市</option>
                                     <option value="1">台北市</option>
                                     <option value="2">新北市</option>
@@ -141,27 +143,30 @@
                     </div>
                     <br>
                     <div style="margin-left: 15px; margin-top: 15px;" class="input-group mb-3">
-                        <span style="font-size: 23px;padding: 5px" class="input-group-text"   id="birthday">生日</span>
+                        <span style="font-size: 15px;padding: 5px" class="input-group-text"   id="birthday">生日</span>
                         <div class = "content"> <input style="border: #cccccc;line-height: 28px;color:gray" th:field="*{birthday}" type="date" required></div>
                     </div>
 
-                    <div class="container">
-                        <button  type="submit" class="btn btn-primary m-2">Save</button>
-                        <button onclick="cancelForm()" type="button" class="btn btn-secondary m-2">Cancel</button>
+                    <div style="text-align: center">
+                        <button  type="submit" style="margin-left:5px;padding-left: 20px; padding-right: 20px;" class="btn2 btn-light"><span style="color:#FFF2F2;padding: 1pt">Save</span></button>
+                        <button onclick="cancelForm()" style="margin-left:5px;padding-left: 20px; padding-right: 20px;" type="button" class="btn2 btn-light"><span style="color:#FFF2F2;padding: 1pt">Cancel</span></button>
                     </div>
+                </div>
+                </form>
+                </div>
 
-                </div>
-                <div class="col align-self-end">
-                    <br>
-                </div>
+            <div class="col align-self-end">
+                <br>
             </div>
-        </form>
+
+        </div>
+
     </div>
+</section>
     <script type="text/javascript">
         function cancelForm() {
             window.location="[[@{/home}]]";
         }
     </script>
-</header>
 </body>
 </html>
