@@ -57,11 +57,15 @@
                 </div>
                 <div class="col-md-4">
                     <h3 style="text-align: center">萬聖節小餅乾</h3>
-                    <div class="row" style="margin: 3px;padding: 10px">
+                    <div class="row justify-content-around" style="margin: 3px;padding: 10px">
 
-                        <div style="float:left;width: 90%;font-size: 20px;">
-                            <i class="fas fa-comment-dollar"></i>售價500</div>
-                        <div><button type="button" style="background-color:white;border: 0pt;font-size: 20px;" class="far fa-heart button"></button></div>
+                        <div style="font-size: 20px;" class="col">
+                            <i class="fas fa-comment-dollar" ></i>售價500
+                        </div>
+                        <div style="font-size: 20px; text-align: right" class="col">
+                            <button type="button" style="background-color:white;border: 0pt;" class="far fa-heart" id="switchFullHeart" onclick="fullHeart()"></button>
+                        </div>
+
                     </div>
                     <p class="lead" style="font-size: 18px; margin: 4px">&emsp;手工餅乾簡單易懂的美味來自於優質的日本麵粉和發酵奶油，香氣圓潤可口。將餅乾設計成輕巧小口的可愛模樣，並變化出質地輕盈或輕脆、香酥與或硬脆等不同口感，讓餅乾迷們可同時享受不同風味的餅乾。
                     </p>
@@ -70,6 +74,17 @@
             </div>
         </div>
     </section>
+    <script>
+        function fullHeart() {
+            var x=document.getElementById("switchFullHeart");
+            if(x.className==='far fa-heart'){
+                x.className='fas fa-heart';
+            }
+            else{
+                x.className='far fa-heart'
+            }
+        }
+    </script>
 </body>
 
 </html>

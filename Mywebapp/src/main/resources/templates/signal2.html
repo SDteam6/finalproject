@@ -14,62 +14,75 @@
 </head>
 
 <body>
-<header>
-    <div class='container'>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" th:href="@{/home}"><img src='pictures/logo.jpg' width='105'></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/home}">主頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="contact.html">聯絡我們</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="faq.html">常見問題</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/login}">登入</a>
-                    </li>
-                </ul>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link"  th:href="@{/profile}"><img src='pictures/user.png'  width="40" height="40" ></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  th:href="@{/shopcart}"><img src='pictures/shopcart.jpg'  width="40" height="40" ></a>
-                    </li>
-                </ul>
+    <header>
+        <div class='container'>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" th:href="@{/home}"><img src='pictures/logo.jpg' width='105'></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/home}">主頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="contact.html">聯絡我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="faq.html">常見問題</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/login}">登入</a>
+                        </li>
+                    </ul>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link"  th:href="@{/profile}"><img src='pictures/user.png'  width="40" height="40" ></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  th:href="@{/shopcart}"><img src='pictures/shopcart.jpg'  width="40" height="40" ></a>
+                        </li>
+                    </ul>
 
-            </div>
-        </nav>
-    </div>
-</header>
-<section id="first" style="margin-top: 30px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 text-center">
-                <img src="pictures/cookie1.jpg" alt="餅乾1">
-            </div>
-            <div class="col-md-4">
-                <h3 style="text-align: center">萬聖節小餅乾</h3>
-                <div class="row" style="margin: 3px;padding: 10px">
-
-                    <div style="float:left;width: 90%;font-size: 20px;">
-                        <i class="fas fa-comment-dollar"></i>售價500</div>
-                    <div><button type="button" style="background-color:white;border: 0pt;font-size: 20px;" class="far fa-heart button"></button></div>
                 </div>
-                <p class="lead" style="font-size: 18px; margin: 4px">&emsp;手工餅乾簡單易懂的美味來自於優質的日本麵粉和發酵奶油，香氣圓潤可口。將餅乾設計成輕巧小口的可愛模樣，並變化出質地輕盈或輕脆、香酥與或硬脆等不同口感，讓餅乾迷們可同時享受不同風味的餅乾。
-                </p>
-                <a  th:href="@{/signal2}"><div style="text-align: center;margin: 3px;padding: 10px"><img src="pictures/go_shopping.png"></div></a>
+            </nav>
+        </div>
+    </header>
+    <section id="first" style="margin-top: 30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-center">
+                    <img src="pictures/cookie1.jpg" alt="餅乾1">
+                </div>
+                <div class="col-md-4">
+                    <h3 style="text-align: center">萬聖節小餅乾</h3>
+                    <div class="row justify-content-around" style="margin: 3px;padding: 10px">
+                        <div style="font-size: 20px;" class="col">
+                            <i class="fas fa-comment-dollar" ></i>售價500
+                        </div>
+                        <div style="font-size: 20px; text-align: right" class="col">
+                            <button type="button" style="background-color:white;border: 0pt;" class="far fa-heart" id="switchFullHeart" onclick="fullHeart()"></button>
+                        </div>
+                    </div>
+                    <p class="lead" style="font-size: 18px; margin: 4px">&emsp;手工餅乾簡單易懂的美味來自於優質的日本麵粉和發酵奶油，香氣圓潤可口。將餅乾設計成輕巧小口的可愛模樣，並變化出質地輕盈或輕脆、香酥與或硬脆等不同口感，讓餅乾迷們可同時享受不同風味的餅乾。
+                    </p>
+                    <a  th:href="@{/signal2}"><div style="text-align: center;margin: 3px;padding: 10px"><img src="pictures/go_shopping.png"></div></a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <script>
+        function fullHeart() {
+            var x=document.getElementById("switchFullHeart");
+            if(x.className==='far fa-heart'){
+                x.className='fas fa-heart';
+            }
+            else{
+                x.className='far fa-heart'
+            }
+        }
+    </script>
 </body>
 
 </html>
