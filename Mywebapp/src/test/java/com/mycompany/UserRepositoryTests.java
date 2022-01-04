@@ -1,6 +1,7 @@
 package com.mycompany;
 
 import com.mycompany.user.User;
+import com.mycompany.user.UserController;
 import com.mycompany.user.UserRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,62 +9,54 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
-
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.Optional;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback
 public class UserRepositoryTests {
     @Autowired private UserRepository repo;
-
     @Test
     public void testAddNew() {
-        User user = new User();
+        User user = new User("qiu","email123@email.com","123456","s");
 
-        user.setFirstName("abcjsdksjdk");
-
-       User savedUser = repo.save(user);
-       System.out.println(user);
-       Assertions.assertThat(savedUser).isNotNull();
-       Assertions.assertThat(savedUser.getId()).isGreaterThan(0);
+        User savedUser = repo.save(user);
+        System.out.println(user);
+        Assertions.assertThat(savedUser).isNotNull();
+        Assertions.assertThat(savedUser.getId()).isGreaterThan(0);
     }
+/*
     @Test
-    public void testListAll() {
-       Iterable<User> users = repo.findAll();
-       Assertions.assertThat(users).hasSizeGreaterThan(0);
-
-       for(User user: users) {
-           System.out.println(user);
-       }
-    }
-
-    @Test
-    public void testUpdate() {
-        Integer userId = 3;
-        Optional<User> optionalUser = repo.findById(userId);
-        User user = optionalUser.get();
-        user.setFirstName("user999");
-        repo.save(user);
-
-        User updatedUser = repo.findById(userId).get();
-        Assertions.assertThat(updatedUser.getFirstName()).isEqualTo("user");
+    public void testAddNew1() {
+        User user = new User(1,"qiu","email123@email.com","123456","s");
+        String respond =uc.saveUser(user,ra);
+        User savedUser = repo.save(user);
+        System.out.println(user);
+        assertEquals("redirect:/home",respond);
+        assertTrue ((repo.findById(1)!=NULL));
     }
 
     @Test
-    public void testGet() {
-        Integer userId = 1;
-        Optional<User> optionalUser = repo.findById(userId);
-        Assertions.assertThat(optionalUser).isPresent();
-        System.out.println(optionalUser.get());
+    public void testAddNew2() {
+        User user = new User(1,"qiu","email123@email.com","123456","s");
+        String respond =uc.saveUser(user,ra);
+        User savedUser = repo.save(user);
+        System.out.println(user);
+        assertEquals("redirect:/home",respond);
+        assertTrue ((repo.findById(1)!=NULL));
     }
 
     @Test
-    public void testDelete() {
-        Integer userId = 5;
-        repo.deleteById(userId);
-
-        Optional<User> optionalUser = repo.findById(userId);
-        Assertions.assertThat(optionalUser).isNotPresent();
+    public void testAddNew3() {
+        User user = new User(1,"qiu","email123@email.com","123456","s");
+        String respond =uc.saveUser(user,ra);
+        User savedUser = repo.save(user);
+        System.out.println(user);
+        assertEquals("redirect:/home",respond);
+        assertTrue ((repo.findById(1)!=NULL));
     }
+*/
 }

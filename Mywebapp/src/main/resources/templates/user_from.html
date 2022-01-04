@@ -2,16 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css " integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="  https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="  https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src=" https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
-    <meta charset="utf-8">
     <title>會員註冊</title>
     <style>
 
@@ -93,7 +91,7 @@
 
                 <div  class="input-group mb-3">
                     <span style="font-size: 15px;padding: 5px" class="input-group-text" id="userid">帳號</span>
-                    <input style="font-size: 15px;padding: 5px"type="text"  input th:field="*{userid}"class="form-control" placeholder="User ID" aria-label="Username" aria-describedby="basic-addon1">
+                    <input style="font-size: 15px;padding: 5px"type="text"  input th:field="*{userid}"class="form-control" placeholder="input email" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <span style="font-size: 15px;padding: 5px"class="input-group-text" id="password" >密碼</span>
@@ -106,11 +104,11 @@
 
                 <div class="row">
                     <div  style="margin-left: 15px;" class="input-group mb-3">
-                        <span style="font-size: 15px;padding: 5px" class="input-group-text" id="address">地址</span>
+                        <span style="font-size: 15px;padding: 5px" class="input-group-text" id="address" >地址</span>
 
                         <div class="col-md">
                             <div  class="form-floating">
-                                <select style="color: dimgray; font-size: 15px; width:45%; padding: 7px;border: #cccccc" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <select style="color: dimgray; font-size: 15px; width:45%; padding: 7px;border: #cccccc" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" required>
                                     <option selected>選擇縣市</option>
                                     <option value="1">台北市</option>
                                     <option value="2">新北市</option>
@@ -138,7 +136,7 @@
 
                     <div class="col-md">
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="address" th:field="*{address}" id="floatingTextarea2" style="height: 35px"></textarea>
+                            <textarea class="form-control" placeholder="address" th:field="*{address}" id="floatingTextarea2" style="height: 35px" required></textarea>
                         </div>
                     </div>
                     <br>

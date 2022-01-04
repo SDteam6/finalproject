@@ -19,7 +19,6 @@ public class User {
     private String firstName;
     private String userid;
     private String password;
-    private String gender;
     private String address;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;      //生日
@@ -40,12 +39,8 @@ public class User {
         this.userid = userid;
     }
 
-
     public String getpassword() {return password;}
     public void setpassword(String password) {this.password = password;}
-
-    public String getgender() {return gender;}
-    public void setgender(String gender) {this.gender = gender;}
 
     public String getaddress() {return address;}
     public void setaddress(String address) {this.address = address;}
@@ -53,9 +48,30 @@ public class User {
     public Date getBirthday() {
         return birthday;
      }
-     public void setBirthday(Date birthday) {
+    public void setBirthday(Date birthday) {
       this.birthday = birthday;
- }
+    }
+
+    public boolean checkEmail(){
+        String format = "\\p{Alpha}\\w{2,15}[@][a-z0-9]{3,}[.]\\p{Lower}{2,}";
+        String email = this.userid;
+        System.out.println(email);
+        if (email.matches(format)){
+            return true;// 郵箱名合法，返回true
+        }else{
+            return false;// 郵箱名不合法，返回false
+        }
+    }
+
+    public User() {
+    }
+
+    public User( String firstName, String userid, String password, String address) {
+        this.firstName = firstName;
+        this.userid = userid;
+        this.password = password;
+        this.address = address;
+    }
 
     @Override
     public String toString() {
@@ -64,7 +80,6 @@ public class User {
                 ", firstName='" + getFirstName() + '\'' +
                 ", userid='" + getuserid() + '\'' +
                 ", password='" + getpassword() + '\'' +
-                ", gender='" + getgender() + '\'' +
                 ", address='" + getaddress() + '\'' +
                 ", birthday=" + birthday +
                 '}';

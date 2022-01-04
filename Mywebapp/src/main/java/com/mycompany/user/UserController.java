@@ -57,6 +57,14 @@ public class UserController {
     public String gotoprofile(Model model) {
         return "profile";
     }
+    @GetMapping("/empty")
+    public String gotoempty(Model model) {
+        return "empty";
+    }
+    @GetMapping("/grammatical")
+    public String gotogrammatical(Model model) {
+        return "grammatical";
+    }
     @GetMapping("/register")
     public String showNewFrom(Model model) {
         model.addAttribute("user", new User());
@@ -65,11 +73,23 @@ public class UserController {
 
     @PostMapping("/users/save")
     public String saveUser(User user, RedirectAttributes ra) {
+        if (user.getFirstName() == "" || user.getpassword() == "" || user.getaddress() == "") {
+            return "empty";
+        }else if(!user.checkEmail()){
+            return "grammatical";
+        }
         service.save(user);
         ra.addFlashAttribute("message", "The user has been saved successfully.");
         return "redirect:/home";
     }
-
+    public String saveUser(User user) {
+        if (user.getFirstName() == "" || user.getpassword() == "" || user.getaddress() == "") {
+            return "empty";
+        }else if(!user.checkEmail()){
+            return "grammatical";
+        }
+        return "redirect:/home";
+    }
     /**
      * Immplementation of updated and delete
      */
