@@ -74,13 +74,13 @@ public class UserController {
     @PostMapping("/users/save")
     public String saveUser(User user, RedirectAttributes ra) {
         if (user.getFirstName() == "" || user.getpassword() == "" || user.getaddress() == "") {
-            return "empty";
+            return "redirect:/empty";
         }else if(!user.checkEmail()){
-            return "grammatical";
+            return "redirect:/grammatical";
         }
         service.save(user);
         ra.addFlashAttribute("message", "The user has been saved successfully.");
-        return "redirect:/home";
+        return "redirect:/login";
     }
     public String saveUser(User user) {
         if (user.getFirstName() == "" || user.getpassword() == "" || user.getaddress() == "") {
@@ -88,7 +88,7 @@ public class UserController {
         }else if(!user.checkEmail()){
             return "grammatical";
         }
-        return "redirect:/home";
+        return "login";
     }
     /**
      * Immplementation of updated and delete
