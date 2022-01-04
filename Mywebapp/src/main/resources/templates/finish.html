@@ -62,7 +62,7 @@
 <br><br>
 
 <section id="first" >
-    <div class="container; shoppingBox" style="margin:center">
+    <div class="container; shoppingBox" >
         <div class="row">
             <div class="col-md-3 text-center" style="margin-top: 35px; padding-left: 40px; padding-bottom:35px">
                 <img src="pictures/cookie_origin.png" >
@@ -91,7 +91,7 @@
 
 <section id="FIN3">
 <div  class='col'>
-    <div class="container" style="margin:center">
+    <div class="container">
         <div class="row">
             <div class="col-md-3 text-center" style="margin-top: 35px; padding-left: 40px; padding-bottom:35px">
 
@@ -128,7 +128,7 @@
 </div>
 </section>
 
-<div id="FIN2" class='col'>
+<div class='col FIN2'>
 
     <h4 style="color: dimgray; font-size: 16px; padding-left: 15px; padding-top:25px;padding-bottom:10px">收件人資訊</h4>
     <hr class="style-up" />
@@ -152,11 +152,10 @@
         <span style="color: #969696; font-size: 14px; padding: 3px 10px">以電子郵件傳送最新消息與優惠活動給我</span>
         </div>
 </div>
- <!--勾選-->
 
 
 <br>
-<div id="FIN2" class='col'>
+<div class='col FIN2'>
 
     <h4 style="color: dimgray; font-size: 16px; padding-left: 15px; padding-top:25px;padding-bottom:10px">注意事項</h4>
     <hr class="style-up" />
@@ -191,37 +190,33 @@
             <a><span style="color:#FFF2F2;">送出訂單</span></a>
         </button>
     </div>
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">溫馨提示</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">溫馨提示</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"style="text-align: center" >
+                <b font face="微軟正黑體">訂單送出後，將無法修改</b>
+                <br>
+                <b font face="微軟正黑體">請於3-4個工作日後，攜帶證件完成取件</b>
+            </div>
+            <div class="modal-footer" >
+                <div style="text-align: center" class="col">
+                <button  type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <a th:href="@{/shopcart}"><span style="color:#FFF2F2;">檢視訂單</span></a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <a th:href="@{/shopcart}"><span style="color:#FFF2F2;">確認送出</span></a>
+                </button>
                 </div>
-                <div class="modal-body"style="text-align: center" >
-                    <b font face="微軟正黑體">訂單送出後，將無法修改</bfont>
-                    <br>
-                    <b font face="微軟正黑體">請於3-4個工作日後，攜帶證件完成取件</bfont>
-
-                </div>
-                <a class="nav-link" >
-                    <div class="modal-footer">
-                        <a th:href="@{/shopcart}">
-                        <button type="button" class="btn btn-secondary"  >檢視訂單</button>
-                        </a>
-
-                        <button type="button" class="btn btn-secondary">
-                            <a th:href="@{/history}">data-dismiss="modal">確認送出</button>
-                        </a>
-                    </div>
-                </a>
             </div>
         </div>
     </div>
-
 </div>
 <br><br><br>
 
