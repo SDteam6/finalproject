@@ -62,10 +62,10 @@
                         <a class="nav-link" th:href="@{/home}">主頁</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                        <a class="nav-link disabled" href="contact.html">聯絡我們</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">常見問題</a>
+                        <a class="nav-link disabled" href="faq.html">常見問題</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/login}">登入</a>
@@ -82,6 +82,7 @@
                 <br>
             </div>
             <br>
+
             <div class="border border-secondary rounded p-3">
                 <h4 style="text-align: center;margin: 15px;padding-bottom:10px;font-size: 35px; color: gray">會員註冊</h4>
                 <div  class="input-group mb-3">
@@ -102,12 +103,9 @@
                     <input style="font-size: 23px;padding: 5px" input type="password" id="inputPassword7" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
 
-
-
                 <div class="row">
                     <div  style="margin-left: 15px;" class="input-group mb-3">
                         <span style="font-size: 23px;padding: 5px" class="input-group-text" id="address">地址</span>
-
                         <div class="col-md">
                             <div  class="form-floating">
                                 <select style="color: dimgray; font-size: 20px; width:45%; padding: 7px;border: #cccccc" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
@@ -144,7 +142,7 @@
                     <br>
                     <div style="margin-left: 15px; margin-top: 15px;" class="input-group mb-3">
                         <span style="font-size: 23px;padding: 5px" class="input-group-text"   id="birthday">生日</span>
-                        <div class = "content"> <input style="border: #cccccc;line-height: 28px;color:gray" th:field="*{birthday}" type="date" required></div>
+                         <input style="border: #cccccc;line-height: 28px;color:gray" th:field="*{birthday}" type="date" required>
                     </div>
 
                     <div class="container">
